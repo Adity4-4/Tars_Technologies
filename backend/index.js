@@ -18,7 +18,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173","http://localhost:4173","http://localhost:5174", "https://tarstechnologies.vercel.app" ],
+    origin: ["http://localhost:5173","http://localhost:4173","http://localhost:5174", "https://tarstechnologies.vercel.app", "https://tars-technologies-admin.vercel.app"],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
     credentials: true,
