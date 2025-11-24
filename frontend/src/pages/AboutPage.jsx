@@ -2,7 +2,7 @@ import React from 'react'
 import HeroSection from '../components/commoncomponents/HeroSection'
 import Counts from '../components/commoncomponents/Counts'
 import GetinTouch from '../components/commoncomponents/GetinTouch';
-import People from '../components/aboutcomponents/people'
+import People from '../components/aboutcomponents/People'
 import Whoweare from '../components/commoncomponents/Whoweare';
 
 // hello added dfghj
