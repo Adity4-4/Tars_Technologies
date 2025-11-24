@@ -9,7 +9,7 @@ import pythonIcon from "../../assets/icons/tech3.png";
 import wordPressIcon from "../../assets/icons/tech4.png";
 import leftarrow from "../../assets/icons/l-arrow.png";
 import rightarrow from "../../assets/icons/r-arrow.png";
-import jsIcon from "../../assets/icons/js.png";
+import jsIcon from "../../assets/icons/JS.png";
 import reactIcon from "../../assets/icons/React.png";
 import angularicon from "../../assets/icons/angular.png";
 import Awsicon from "../../assets/icons/Aws.png";
