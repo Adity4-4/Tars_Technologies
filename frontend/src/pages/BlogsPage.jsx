@@ -14,7 +14,7 @@ function BlogsPage() {
   useEffect(() => {
     const fetchCases = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/blogs")
+        const res = await axios.get("https://tars-technologies-seven.vercel.app/api/blogs")
         setBlogs(res.data)
       } catch (err) {
         console.error("Error fetching Blogs", err)

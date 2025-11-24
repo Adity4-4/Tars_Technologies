@@ -8,7 +8,7 @@ function AdminQuotes() {
   const [newRemark, setNewRemark] = useState("");
   const Save = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/quotes", {
+      const response = await axios.post("https://tars-technologies-seven.vercel.app/api/quotes", {
         remark: newRemark,
       });
       console.log("Saved remark:", response.data);
@@ -20,13 +20,13 @@ function AdminQuotes() {
   };
 
   const fetchQuotes = async () => {
-    const res = await axios.get("http://localhost:5000/api/quotes");
+    const res = await axios.get("https://tars-technologies-seven.vercel.app/api/quotes");
     setQuotes(res.data);
   };
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/quotes")
+      .get("https://tars-technologies-seven.vercel.app/api/quotes")
       .then((res) => setQuotes(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -38,7 +38,7 @@ function AdminQuotes() {
 
   const handleSaveRemark = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/quotes/${id}/remark`, {
+      await axios.put(`https://tars-technologies-seven.vercel.app/api/quotes/${id}/remark`, {
         remark: newRemark,
       });
       setEditingRemarkId(null);
@@ -50,7 +50,7 @@ function AdminQuotes() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/quotes/${id}`)
+      .delete(`https://tars-technologies-seven.vercel.app/api/quotes/${id}`)
       .then(() => {
         setQuotes(quotes.filter((q) => q._id !== id));
       })

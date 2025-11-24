@@ -20,7 +20,7 @@ function BlogDetails() {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/blogs/${id}`);
+                const res = await axios.get(`https://tars-technologies-seven.vercel.app/api/blogs/${id}`);
                 setBlogData(res.data);
             } catch (err) {
                 console.error("Error fetching blog:", err)
@@ -29,7 +29,7 @@ function BlogDetails() {
 
         const fetchRelatedBlogs = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/blogs")
+                const res = await axios.get("https://tars-technologies-seven.vercel.app/api/blogs")
 
                 // exclude current blog, take 3 others
                 const filtered = res.data.filter(b => b._id !== id).slice(0, 3);

@@ -68,7 +68,7 @@ const CareersPage = () => {
   const getMediaUrl = (url) => {
     if (!url) return "";
     if (url.startsWith("http") || url.startsWith("https")) return url;
-    return `http://localhost:5000/${url.replace(/\\/g, "/")}`;
+    return `https://tars-technologies-seven.vercel.app/${url.replace(/\\/g, "/")}`;
   };
 
   const handleSubmit = async (e) => {
@@ -95,7 +95,7 @@ const CareersPage = () => {
       formData.append("resume", e.target.resume.files[0]);
 
     try {
-      await axios.post("http://localhost:5000/api/careers/apply", formData, {
+      await axios.post("https://tars-technologies-seven.vercel.app/api/careers/apply", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -153,12 +153,12 @@ const CareersPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/careers/images")
+      .get("https://tars-technologies-seven.vercel.app/api/careers/images")
       .then((res) => setTeamImages(res?.data?.images || []))
       .catch((err) => console.log("Error fetching images:", err));
 
     axios
-      .get("http://localhost:5000/api/careers/section")
+      .get("https://tars-technologies-seven.vercel.app/api/careers/section")
       .then((res) => {
         if (res.data.success && res.data.data) {
             setCareerData({

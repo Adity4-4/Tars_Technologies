@@ -48,7 +48,7 @@ function ProductDetails() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/products/${id}`);
+        const res = await axios.get(`https://tars-technologies-seven.vercel.app/api/products/${id}`);
         setProduct(res.data);
       } catch (err) {
         console.error("Error fetching product:", err);
@@ -57,7 +57,7 @@ function ProductDetails() {
 
     const fetchRelatedProducts = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/products`);
+        const res = await axios.get(`https://tars-technologies-seven.vercel.app/api/products`);
         const filtered = res.data.filter((p) => p._id !== id).slice(0, 3);
         setRelatedProducts(filtered);
       } catch (err) {

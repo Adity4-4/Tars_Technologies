@@ -13,7 +13,7 @@ function Clients() {
   useEffect(() => {
     const fetchClients = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/clients");
+        const res = await axios.get("https://tars-technologies-seven.vercel.app/api/clients");
         if (res.data.success) {
           setClients(res.data.data);
         }

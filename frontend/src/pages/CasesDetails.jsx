@@ -17,7 +17,7 @@ function CasesDetails() {
     useEffect(() => {
         const fetchCase = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/cases/${id}`);
+                const res = await axios.get(`https://tars-technologies-seven.vercel.app/api/cases/${id}`);
                 setCaseData(res.data);
             } catch (err) {
                 console.error("Error fetching case:", err);
@@ -26,7 +26,7 @@ function CasesDetails() {
 
         const fetchRelatedCases = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/cases");
+                const res = await axios.get("https://tars-technologies-seven.vercel.app/api/cases");
 
                 // exclude current case, take 2 others
                 const filtered = res.data.filter(b => b._id !== id).slice(0, 2);

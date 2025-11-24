@@ -43,7 +43,7 @@ function AddProduct() {
         const formDataImg = new FormData();
         formDataImg.append('image', file);
 
-        const res = await axios.post("http://localhost:5000/api/images/upload", formDataImg, {
+        const res = await axios.post("https://tars-technologies-seven.vercel.app/api/images/upload", formDataImg, {
           headers: { "Content-Type": "multipart/form-data" }
         });
 
@@ -78,7 +78,7 @@ function AddProduct() {
   // Fetch Products
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://tars-technologies-seven.vercel.app/api/products");
       setProducts(res.data);
     } catch (err) {
       console.error("Error fetching products:", err);
@@ -202,7 +202,7 @@ function AddProduct() {
 //   e.preventDefault();
 
 //   try {
-//     const response = await axios.post("http://localhost:5000/api/products", formData);
+//     const response = await axios.post("https://tars-technologies-seven.vercel.app/api/products", formData);
 
 //     console.log("Product Saved:", response.data);
 
@@ -236,13 +236,13 @@ const handleSubmit = async (e) => {
     if (editingId) {
       // UPDATE
       response = await axios.put(
-        `http://localhost:5000/api/products/${editingId}`,
+        `https://tars-technologies-seven.vercel.app/api/products/${editingId}`,
         formData
       );
     } else {
       // CREATE
       response = await axios.post(
-        "http://localhost:5000/api/products",
+        "https://tars-technologies-seven.vercel.app/api/products",
         formData
       );
     }
@@ -313,7 +313,7 @@ const handleSubmit = async (e) => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(`https://tars-technologies-seven.vercel.app/api/products/${id}`);
       fetchProducts();
       alert("Product deleted successfully!");
     } catch (err) {

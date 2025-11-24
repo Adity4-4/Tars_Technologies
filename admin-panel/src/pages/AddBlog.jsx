@@ -36,7 +36,7 @@ function AddBlog() {
         const formData = new FormData();
         formData.append("image", file);
 
-        const res = await axios.post("http://localhost:5000/api/images/upload", formData, {
+        const res = await axios.post("https://tars-technologies-seven.vercel.app/api/images/upload", formData, {
           headers: { "Content-Type": "multipart/form-data" }
         });
 
@@ -71,7 +71,7 @@ function AddBlog() {
   // Fetch Blogs
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/blogs")
+      const res = await axios.get("https://tars-technologies-seven.vercel.app/api/blogs")
       setBlogs(res.data)
     } catch (err) {
       console.error("Error fetching blogs:", err)
@@ -98,7 +98,7 @@ function AddBlog() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/blogs", formData)
+      await axios.post("https://tars-technologies-seven.vercel.app/api/blogs", formData)
       setFormData({ images: [], tag: "", title: "", name: "", date: "", readingTime: "", sections: [{ subtitle: "", content: "" }], points: [""] })
       fetchBlogs()
     } catch (err) {
@@ -115,7 +115,7 @@ function AddBlog() {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/blogs/${id}`, formData)
+      await axios.put(`https://tars-technologies-seven.vercel.app/api/blogs/${id}`, formData)
       setEditingId(null)
       setFormData({ images: [], tag: "", title: "", name: "", date: "", readingTime: "", sections: [{ subtitle: "", content: "" }], points: [""] })
       fetchBlogs()
@@ -128,7 +128,7 @@ function AddBlog() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this blog?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/blogs/${id}`)
+        await axios.delete(`https://tars-technologies-seven.vercel.app/api/blogs/${id}`)
         fetchBlogs()
       } catch (err) {
         console.error("Error deleting blog:", err)

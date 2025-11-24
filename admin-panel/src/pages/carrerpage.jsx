@@ -6,7 +6,7 @@ import axios from "axios";
 const getMediaUrl = (url) => {
   if (!url) return "";
   if (url.startsWith("http") || url.startsWith("https")) return url;
-  return `http://localhost:5000/${url.replace(/\\/g, "/")}`;
+  return `https://tars-technologies-seven.vercel.app/${url.replace(/\\/g, "/")}`;
 };
 
 function Carrer() {
@@ -32,7 +32,7 @@ function Carrer() {
 
   const fetchUploadedImages = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/career/images");
+      const res = await axios.get("https://tars-technologies-seven.vercel.app/api/career/images");
       setUploadedImages(res.data.images || []);
     } catch (err) {
       console.error("Error fetching images:", err);
@@ -41,7 +41,7 @@ function Carrer() {
 
   const fetchVideo = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/career/video");
+      const res = await axios.get("https://tars-technologies-seven.vercel.app/api/career/video");
       setUploadedVideo(res.data.data);
     } catch (err) {
       console.error("Error fetching video:", err);
@@ -50,7 +50,7 @@ function Carrer() {
 
   const fetchSectionContent = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/career/section");
+      const res = await axios.get("https://tars-technologies-seven.vercel.app/api/career/section");
       if (res.data.data) {
         setSectionData(res.data.data);
       }
@@ -78,7 +78,7 @@ function Carrer() {
       for (let file of selectedFiles) {
         const formData = new FormData();
         formData.append("image", file);
-        await axios.post("http://localhost:5000/api/career/image", formData, {
+        await axios.post("https://tars-technologies-seven.vercel.app/api/career/image", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       }
@@ -98,7 +98,7 @@ function Carrer() {
     formData.append("video", videoFile);
 
     try {
-      await axios.post("http://localhost:5000/api/career/video", formData, {
+      await axios.post("https://tars-technologies-seven.vercel.app/api/career/video", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setVideoFile(null);
@@ -111,7 +111,7 @@ function Carrer() {
 
   const saveSectionData = async () => {
     try {
-      await axios.put("http://localhost:5000/api/career/section", sectionData);
+      await axios.put("https://tars-technologies-seven.vercel.app/api/career/section", sectionData);
       alert("Saved successfully!");
     } catch {
       alert("Error saving text!");
@@ -122,7 +122,7 @@ function Carrer() {
     if (!window.confirm("Delete this image?")) return;
     try {
       const encodedId = encodeURIComponent(public_id);
-      await axios.delete(`http://localhost:5000/api/career/image/${encodedId}`);
+      await axios.delete(`https://tars-technologies-seven.vercel.app/api/career/image/${encodedId}`);
       fetchUploadedImages();
     } catch (err) {
       alert("Error deleting image");
@@ -134,7 +134,7 @@ function Carrer() {
       return;
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/career/applicant/${id}`
+        `https://tars-technologies-seven.vercel.app/api/career/applicant/${id}`
       );
       if (res.data.success) {
         setApplicants(res.data.applicants);

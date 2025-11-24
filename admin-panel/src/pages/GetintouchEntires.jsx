@@ -18,7 +18,7 @@ function GetintouchEntries() {
     // Fetch Entries
     const fetchEntries = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/getintouch");
+            const res = await axios.get("https://tars-technologies-seven.vercel.app/api/getintouch");
             setEntries(res.data);
         } catch (error) {
             console.error("Error fetching Entries", error);
@@ -33,7 +33,7 @@ function GetintouchEntries() {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this message?")) {
             try {
-                await axios.delete(`http://localhost:5000/api/getintouch/${id}`);
+                await axios.delete(`https://tars-technologies-seven.vercel.app/api/getintouch/${id}`);
                 fetchEntries();
             } catch (error) {
                 console.error("Error deleting Entry", error);
@@ -50,7 +50,7 @@ function GetintouchEntries() {
     // Save edited Entry
     const handleSaveEdit = async (id) => {
         try {
-            await axios.put(`http://localhost:5000/api/getintouch/${id}`, editData);
+            await axios.put(`https://tars-technologies-seven.vercel.app/api/getintouch/${id}`, editData);
             setEditingEntry(null);
             fetchEntries();
         } catch (error) {

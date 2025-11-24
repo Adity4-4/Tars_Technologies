@@ -54,7 +54,7 @@ function Products() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products");
+        const res = await axios.get("https://tars-technologies-seven.vercel.app/api/products");
         setProducts(res.data);
       } catch (error) {
         console.error("Error fetching products:", error);

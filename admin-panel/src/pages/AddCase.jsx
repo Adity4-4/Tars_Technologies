@@ -30,7 +30,7 @@ function AddCase() {
         const formData = new FormData();
         formData.append('image', file);
 
-        const res = await axios.post("http://localhost:5000/api/images/upload", formData, {
+        const res = await axios.post("https://tars-technologies-seven.vercel.app/api/images/upload", formData, {
           headers: { "Content-Type": "multipart/form-data" }
         });
 
@@ -65,7 +65,7 @@ function AddCase() {
   // Fetch cases
   const fetchCases = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/cases");
+      const res = await axios.get("https://tars-technologies-seven.vercel.app/api/cases");
       setCases(res.data);
     } catch (err) {
       console.error("Error fetching cases:", err);
@@ -90,7 +90,7 @@ function AddCase() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/cases", formData);
+      await axios.post("https://tars-technologies-seven.vercel.app/api/cases", formData);
       setFormData({ images: [], title: "", description: "", details: { problemBefore: "", problemSolved: "", whatWeAdd: "" } });
       fetchCases();
     } catch (err) {
@@ -101,7 +101,7 @@ function AddCase() {
   // Save edited case
   const handleSave = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/cases/${id}`, formData);
+      await axios.put(`https://tars-technologies-seven.vercel.app/api/cases/${id}`, formData);
       setEditingId(null);
       setFormData({ images: [], title: "", description: "", details: { problemBefore: "", problemSolved: "", whatWeAdd: "" } });
       fetchCases();
@@ -114,7 +114,7 @@ function AddCase() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this case?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/cases/${id}`);
+        await axios.delete(`https://tars-technologies-seven.vercel.app/api/cases/${id}`);
         fetchCases();
       } catch (err) {
         console.error("Error deleting case:", err);

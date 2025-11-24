@@ -9,7 +9,7 @@ function AddClients() {
 
   const fetchUploadedImages = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/clients"); 
+    const res = await axios.get("https://tars-technologies-seven.vercel.app/api/clients"); 
     setUploadedImages(res.data.data); // `resources` array from Cloudinary
   } catch (err) {
     console.error("Error fetching images:", err);
@@ -43,7 +43,7 @@ function AddClients() {
         const formData = new FormData();
         formData.append("image", file);
 
-        await axios.post("http://localhost:5000/api/clients", formData, {
+        await axios.post("https://tars-technologies-seven.vercel.app/api/clients", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       }
@@ -62,7 +62,7 @@ function AddClients() {
   // Remove image (delete from DB + Cloudinary)
   const handleRemoveImage = async (public_id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/clients/${public_id}`);
+      await axios.delete(`https://tars-technologies-seven.vercel.app/api/clients/${public_id}`);
       fetchUploadedImages(); // refresh list
     } catch (err) {
       console.error("Delete error:", err);

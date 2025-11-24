@@ -27,7 +27,7 @@ function GetQuote() {
         formData.service === "Other" ? formData.otherService : formData.service,
     };
     try {
-      const response = await fetch("http://localhost:5000/api/quotes", {
+      const response = await fetch("https://tars-technologies-seven.vercel.app/api/quotes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(finalData),

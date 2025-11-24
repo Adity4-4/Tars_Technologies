@@ -22,7 +22,7 @@ function GetinTouch() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/api/getintouch", {
+      const res = await fetch("https://tars-technologies-seven.vercel.app/api/getintouch", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData), // send state a JSON

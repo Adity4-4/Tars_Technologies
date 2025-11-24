@@ -12,7 +12,7 @@ function CasesPage() {
   useEffect(() => {
     const fetchCases = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/cases")
+        const res = await axios.get("https://tars-technologies-seven.vercel.app/api/cases")
         setCases(res.data)
       } catch (error) {
         console.error("Enter fetching Cases", error)
