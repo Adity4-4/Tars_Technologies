@@ -38,7 +38,7 @@ app.use("/api/getintouch", getintouchRoutes);
 app.use("/api/quotes", quoteRoutes);
 app.use("/uploads", express.static("uploads"));
 
-app.use("/api/careers", careerRoutes);
+// app.use("/api/careers", careerRoutes);
 app.use("/api/career", careerRoutes);
 
 mongoose
