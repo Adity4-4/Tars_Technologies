@@ -1,7 +1,7 @@
 import React from 'react'
 import herosectionimage from '../assets/images/herosectionimage.png'
 import tarslogo from '../assets/icons/tarslogo.png'
-import Contact from '../assets/images/Contact-1.svg'
+import Contact from '../assets/images/contact-1.svg'
 import ContactBtn from '../assets/images/contact-btn.png'
 
 function ContactPage() {
