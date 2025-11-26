@@ -5,7 +5,17 @@ import GetinTouch from '../components/commoncomponents/GetinTouch';
 import People from '../components/aboutcomponents/People'
 import Whoweare from '../components/commoncomponents/Whoweare';
 import image from '../assets/images/herosectionimage.png'
-
+import sumedhImg from "../assets/images/sumedh-sir.png";
+import shrutikaImg from "../assets/images/shrutika-mam.png";
+import Kshitij from "../assets/images/Kshitij.png";
+import nitish from "../assets/images/nitesh.png"
+import nikhil from "../assets/images/nikhil.png"
+import naitik from "../assets/images/naitik-sir.jpg"
+import sharavn from "../assets/images/shravan.png"
+import vijay from "../assets/images/vijay.png"
+import vedant from "../assets/images/vedant.png"
+import amogh from "../assets/images/amogh.png"
+import atharva from "../assets/images/atharva.png"
 function AboutPage() {
   return (
     // ➤ FIX 1: Prevent horizontal overflow
@@ -56,9 +66,9 @@ function AboutPage() {
           Your Aspiration, Our Expertise: Driven by<br className="hidden md:block" /> Dreamers, Built by Doers.
         </p>
 
-        <div className='flex flex-col md:flex-row justify-center items-center gap-8 md:gap-30 lg:gap-50 py-12 lg:py-17'>
-          <People picture={image} name='Sumedh Boudh' position='Founder' />
-          <People picture={image} name='Shrutika Tirpude' position='Co-Founder' />
+        <div className='flex flex-col md:flex-row justify-center items-center gap-8 md:gap-30 lg:gap-50 py-12 lg:py-17  '>
+          <People picture={sumedhImg} name='Sumedh Boudh' position='Founder'  />
+          <People picture={shrutikaImg} name='Shrutika Tirpude' position='Co-Founder' />
         </div>
 
         <p className='pt-8 lg:pt-14 text-[12px] md:text-[16px] lg:text-[18px] text-[#9C9C9C] font-[500] uppercase tracking-widest'>Our Team</p>
@@ -68,15 +78,15 @@ function AboutPage() {
 
         {/* Team Grid - Responsive Gaps */}
         <div className='flex flex-wrap justify-center gap-x-6 gap-y-10 lg:gap-x-11 lg:gap-y-15 pt-12 lg:pt-18 px-4 lg:px-40'>
-          <People picture={image} name='Your Name' position='Position' />
-          <People picture={image} name='Your Name' position='Position' />
-          <People picture={image} name='Your Name' position='Position' />
-          <People picture={image} name='Your Name' position='Position' />
-          <People picture={image} name='Your Name' position='Position' />
-          <People picture={image} name='Your Name' position='Position' />
-          <People picture={image} name='Your Name' position='Position' />
-          <People picture={image} name='Your Name' position='Position' />
-          <People picture={image} name='Your Name' position='Position' />
+          <People picture={atharva} name='Atharva Rajkondawar' position='Project Manager' />
+          <People picture={Kshitij} name='Kshitij Meshram' position='Leader' />
+          <People picture={amogh} name='Amogh Ramteke' position='Operation Head' />
+          <People picture={nitish} name='Nitish Tiwari' position='Senior Developer' />
+          <People picture={nikhil} name='Nikhil Bawane' position='UI/UX Designer' />
+          <People picture={naitik} name='Your Name' position='Position' />
+          <People picture={vijay} name='Your Name' position='Position' />
+          <People picture={vedant} name='Your Name' position='Position' />
+          <People picture={amogh} name='Your Name' position='Position' />
         </div>
       </div>
 

@@ -2,27 +2,51 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
-import htmlIcon from "../assets/icons/tech2.png";
-import cssIcon from "../assets/icons/tech1.png";
-import pythonIcon from "../assets/icons/tech3.png";
+import htmlIcon from "../assets/icons/HTML5.png";
+import cssIcon from "../assets/icons/CSS3.png";
+import pythonIcon from "../assets/icons/python.png";
 import wordPressIcon from "../assets/icons/tech4.png";
-import jsIcon from "../assets/icons/JS.png";
-import reactIcon from "../assets/icons/React.png";
-import angularicon from "../assets/icons/angular.png";
-import Awsicon from "../assets/icons/Aws.png";
-import Azureicon from "../assets/icons/azure.jpg";
+import javascript from "../assets/icons/js.png"
+import Nodejs from "../assets/icons/Nodejs.png"
+import Reacticon from "../assets/icons/react.png"
+import Fluttericon from "../assets/icons/flutter.png"
+import Vueicon from "../assets/icons/Vue.png"
+import Angularicon from "../assets/icons/angular.png"
+import AwsIcon from "../assets/icons/AWS.png"
+import Firebaseicon from "../assets/icons/Firebase.png"
+import Nextjsicon from "../assets/icons/Nextjs.png"
+import Expressjsicon from "../assets/icons/Express.png"
+import Nodemonicon from "../assets/icons/Nodemon.png"
+import PHPicon from "../assets/icons/PHP.png"
+import MySqlicon from "../assets/icons/MySQL.png"
+
+
+
+
 import image2 from "../assets/images/herosectionimage.png";
+
 
 const techIcons = {
   HTML: htmlIcon,
-  CSS: cssIcon,
-  Python: pythonIcon,
-  WordPress: wordPressIcon,
-  JavaScript: jsIcon,
-  React: reactIcon,
-  Angular: angularicon,
-  Aws: Awsicon,
-  Azure: Azureicon,
+    CSS: cssIcon,
+    Python: pythonIcon,
+    WordPress: wordPressIcon,
+    "Java Script": javascript,
+    'Node js': Nodejs,
+    React:Reacticon,
+    Flutter:Fluttericon,
+    Vue:Vueicon,
+    Angular:Angularicon,
+    AWS:AwsIcon,
+    Firebase:Firebaseicon,
+    'Next js': Nextjsicon,
+    'Express.js':Expressjsicon,
+    Nodemon:Nodemonicon,
+    PHP:PHPicon,
+    MySQL:MySqlicon
+  
+
+ 
 };
 
 function ProductDetails() {
@@ -113,6 +137,7 @@ function ProductDetails() {
                   <p className="text-white/60 text-sm font-medium uppercase tracking-wide font-[neutral_face]">
                     Technologies Used
                   </p>
+               
                   <div className="flex flex-wrap gap-4 items-center">
                     {product.technologies.map((tech, index) => (
                       <div 
