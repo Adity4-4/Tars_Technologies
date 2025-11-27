@@ -7,7 +7,7 @@ import Whoweare from '../components/commoncomponents/Whoweare';
 import image from '../assets/images/herosectionimage.png'
 import sumedhImg from "../assets/images/sumedh-sir.png";
 import shrutikaImg from "../assets/images/shrutika-mam.png";
-import Kshitij from "../assets/images/Kshitij.png";
+import Kshitij from "../assets/images/kshitij.png";
 import nitish from "../assets/images/nitesh.png"
 import nikhil from "../assets/images/nikhil.png"
 import naitik from "../assets/images/naitik-sir.jpg"
