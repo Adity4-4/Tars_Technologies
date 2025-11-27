@@ -42,7 +42,7 @@ const techIcons = {
   Aws: AwsIcon,
   Firebase: Firebaseicon,
   Nextjs : Nextjsicon,
-  Expressjs: Expressjsicon,
+  'Express.js': Expressjsicon,
   Nodemon:Nodemonicon,
   PHP:PHPicon,
   MySQL:MySqlicon,

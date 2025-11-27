@@ -50,14 +50,15 @@ function Navbar() {
   return (
     <>
       <nav
-    
-        className={`fixed w-full z-50 flex justify-between items-center px-7 lg:px-16 py-7 lg:py-8 text-white transition-all duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
-          } ${isScrolled ? "bg-black shadow-md" : "bg-transparent"}`}
-      >
-        {/* logo */}
-        <NavLink to='/'>
-          <img src={tarslogo} className='w-[140px] lg:w-[190px] ' />
-        </NavLink>
+      // Updated className below:
+      className={`fixed w-full z-50 flex justify-between items-center px-7 lg:px-16 py-7 lg:py-8 text-white transition-all duration-300 ${
+        showNavbar || isMenuOpen ? "translate-y-0" : "-translate-y-full"
+      } ${isScrolled ? "bg-black shadow-md" : "bg-transparent"}`}
+    >
+      {/* logo */}
+      <NavLink to='/'>
+        <img src={tarslogo} className='w-[140px] lg:w-[190px] ' />
+      </NavLink>
 
         {/* desktop nav */}
         <div className='hidden md:flex gap-4 lg:gap-14 text-[13px] lg:text-[16px] '>

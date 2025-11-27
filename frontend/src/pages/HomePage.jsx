@@ -31,7 +31,7 @@ function HomePage() {
         <img src={herosectionimage} className='absolute object-cover w-full h-full' alt="Hero Background" />
         
         {/* ➤ FIX: Lowered z-index from 50 to 10 so Navbar covers it */}
-        <div className='absolute flex right-5 lg:right-30 top-125 lg:top-110  space-y-0 lg:space-y-1.2 gap-3 z-50'>
+        <div className='absolute flex right-5 lg:right-30 top-125 lg:top-110  space-y-0 lg:space-y-1.2 gap-3 z-10'>
           <img data-aos="flip-left" data-aos-duration="2000" src={herosectionicon1} onClick={Linkdinprofile} className='w-8 md:w-9 lg:w-12 cursor-pointer' />
           <img data-aos="flip-left" data-aos-duration="2000" src={herosectionicon2} className='w-8 md:w-9 lg:w-12 cursor-pointer' />
           <img data-aos="flip-left" data-aos-duration="2000" src={herosectionicon3} className='w-8 md:w-9 lg:w-12 cursor-pointer' />
@@ -49,10 +49,10 @@ function HomePage() {
           </p>
 
           <div className='flex flex-wrap justify-center items-center gap-3 md:gap-4 lg:gap-20 mt-15 lg:mt-30  text-[10px] md:text-[14px] lg:text-[24px] px-2 w-full'>
-            <p data-aos="zoom-out-up" className="bg-white/10 px-3 py-1 rounded-full lg:bg-transparent lg:p-0">Full Cycle Product Development</p>
-            <p data-aos="zoom-out-up" className="bg-white/10 px-3 py-1 rounded-full lg:bg-transparent lg:p-0">Digital Product Design</p>
-            <p data-aos="zoom-out-up" className="bg-white/10 px-3 py-1 rounded-full lg:bg-transparent lg:p-0">Branding</p>
-            <p data-aos="zoom-out-up" className="bg-white/10 px-3 py-1 rounded-full lg:bg-transparent lg:p-0">Industry Automation Service</p>
+          <a href="https://tarstech.in/home/product-development"> <p data-aos="zoom-out-up" className="bg-white/10 px-3 py-1 rounded-full lg:bg-transparent lg:p-0">Full Cycle Product Development</p></a> 
+           <a href="https://tarsdigital.in/"> <p data-aos="zoom-out-up" className="bg-white/10 px-3 py-1 rounded-full lg:bg-transparent lg:p-0">Digital Product Design</p></a>
+            <a href="https://tarsdigital.in/"> <p data-aos="zoom-out-up" className="bg-white/10 px-3 py-1 rounded-full lg:bg-transparent lg:p-0">Branding</p></a>
+           <a href="https://tarstech.in/home/indusrty-automation">  <p data-aos="zoom-out-up" className="bg-white/10 px-3 py-1 rounded-full lg:bg-transparent lg:p-0">Industry Automation Service</p></a>
           </div>
 
           <div className='flex flex-col items-center gap-2 lg:gap-2 mt-auto mb-10 lg:mb-36 lg:pt-8 text-[13px] md:text-[15px] lg:text-[16px] font-[neutral_face]'>

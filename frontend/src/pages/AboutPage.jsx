@@ -79,7 +79,7 @@ function AboutPage() {
         {/* Team Grid - Responsive Gaps */}
         <div className='flex flex-wrap justify-center gap-x-6 gap-y-10 lg:gap-x-11 lg:gap-y-15 pt-12 lg:pt-18 px-4 lg:px-40'>
           <People picture={atharva} name='Atharva Rajkondawar' position='Project Manager' />
-          <People picture={Kshitij} name='Kshitij Meshram' position='Leader' />
+          <People picture={Kshitij} name='Kshitij Meshram' position='Team Leader' />
           <People picture={amogh} name='Amogh Ramteke' position='Operation Head' />
           <People picture={nitish} name='Nitish Tiwari' position='Senior Developer' />
           <People picture={nikhil} name='Nikhil Bawane' position='UI/UX Designer' />
