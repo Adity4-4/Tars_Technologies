@@ -9,7 +9,7 @@ import pythonIcon from "../../assets/icons/python.png";
 import wordPressIcon from "../../assets/icons/tech4.png";
 import leftarrow from "../../assets/icons/l-arrow.png";
 import rightarrow from "../../assets/icons/r-arrow.png";
-import javascript from "../../assets/icons/js.png"
+import javascript from "../../assets/icons/JavaScript.png"
 import Nodejs from "../../assets/icons/Nodejs.png"
 import Reacticon from "../../assets/icons/react.png"
 import Fluttericon from "../../assets/icons/flutter.png"

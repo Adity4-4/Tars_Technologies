@@ -6,7 +6,7 @@ import htmlIcon from "../assets/icons/HTML5.png";
 import cssIcon from "../assets/icons/CSS3.png";
 import pythonIcon from "../assets/icons/python.png";
 import wordPressIcon from "../assets/icons/tech4.png";
-import javascript from "../assets/icons/js.png"
+import javascript from "../assets/icons/JavaScript.png"
 import Nodejs from "../assets/icons/Nodejs.png"
 import Reacticon from "../assets/icons/react.png"
 import Fluttericon from "../assets/icons/flutter.png"
